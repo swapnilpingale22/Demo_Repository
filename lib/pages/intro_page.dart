@@ -47,7 +47,7 @@ class IntroPage extends StatelessWidget {
           const Text(
             'Fresh items everyday',
             style: TextStyle(
-              color: Colors.grey,
+              color: Colors.black54,
             ),
           ),
           const Spacer(),
@@ -59,14 +59,22 @@ class IntroPage extends StatelessWidget {
                 )),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.deepPurple,
+                color: Colors.green.shade300,
                 borderRadius: BorderRadius.circular(12),
+                boxShadow: const [
+                  BoxShadow(
+                    blurRadius: 4,
+                    spreadRadius: 1,
+                    offset: Offset(3, 3),
+                    color: Colors.grey,
+                  )
+                ],
               ),
               padding: const EdgeInsets.all(24.0),
               child: const Text(
                 'Get Started',
                 style: TextStyle(
-                  color: Colors.white,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),

@@ -8,58 +8,51 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 48),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24),
-              child: Text('Good morning'),
-            ),
-            const SizedBox(height: 5),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24),
-              child: Text(
-                "Let's order fresh items for you",
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 48),
+              const Text(
+                'Good morning',
                 style: TextStyle(
-                  fontSize: 36,
+                  fontSize: 16,
                 ),
               ),
-            ),
-            const SizedBox(height: 24),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24),
-              child: Divider(),
-            ),
-            const SizedBox(height: 24),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24),
-              child: Text(
+              const SizedBox(height: 5),
+              const Text(
+                "Let's order fresh items for you",
+                style: TextStyle(
+                  fontSize: 32,
+                ),
+              ),
+              const SizedBox(height: 24),
+              const Divider(),
+              const SizedBox(height: 24),
+              const Text(
                 'Fresh Items',
                 style: TextStyle(
                   fontSize: 16,
                 ),
               ),
-            ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 5),
+              Expanded(
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
+                    crossAxisCount: 3,
                   ),
-                  itemCount: 10,
+                  itemCount: 20,
                   itemBuilder: (context, index) {
-                    return const GroceryItemTile(
+                    return GroceryItemTile(
                       itemName: 'Avocado',
                       itemPrice: '48.00',
-                      color: Colors.green,
+                      color: Colors.green.shade300,
                     );
                   },
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
